@@ -1,13 +1,9 @@
+// Projects
 export const useProjects = () => useState("projects", () => {
-    const { data } = useFetch("/api/projects", {
-        pick: ["id", "title"] as any
-    });
-    return data;
+    return useFetch("/api/projects").data;
 });
 
+// Knowledges
 export const useKnowledges = () => useState("knowledges", () => {
-    const { data } = useFetch("/api/knowledges", {
-        pick: ["id", "title"] as any
-    });
-    return data;
+    return useFetch("/api/knowledges").data;
 });

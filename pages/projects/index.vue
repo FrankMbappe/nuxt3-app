@@ -3,7 +3,7 @@
 		<p>Available pages:</p>
 		<ul>
 			<li v-for="page in maxProjects" :key="page">
-				<NuxtLink :to="`/projects/${page}`" class="underline">
+				<NuxtLink :to="`/projects/${page.id}`" class="underline">
 					Project {{ page.id }} - {{ page.title }}
 				</NuxtLink>
 			</li>

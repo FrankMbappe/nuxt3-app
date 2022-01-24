@@ -2,8 +2,8 @@
 	<div>
 		<p>Available pages:</p>
 		<ul>
-			<li v-for="page in maxKnowledges" :key="page">
-				<NuxtLink :to="`/projects/${page}`" class="underline">
+			<li v-for="page in maxKnowledges" :key="page.id">
+				<NuxtLink :to="`/projects/${page.id}`" class="underline">
 					Knowledge {{ page.id }} - {{ page.title }}
 				</NuxtLink>
 			</li>
