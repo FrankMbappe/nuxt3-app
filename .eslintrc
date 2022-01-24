@@ -1,0 +1,23 @@
+{
+	"extends": ["@antfu"],
+    "rules": {
+        "no-tabs": ["off"],
+        "quotes": ["off"],
+        "indent": ["off"],
+        "semi": ["off"],
+        "curly": ["off"],
+        "brace-style": ["off"],
+        "no-console": ["off"],
+        "@typescript-eslint/semi": ["warn", "always"],
+        "@typescript-eslint/indent": ["off"],
+        "@typescript-eslint/quotes": ["error", "double"],
+        "@typescript-eslint/comma-dangle": ["warn", "never"],
+        "@typescript-eslint/brace-style": ["error", "1tbs"],
+        "vue/html-indent": ["error", "tab", {
+            "baseIndent": 1
+        }],
+        "vue/script-indent": ["error", "tab", {
+            "baseIndent": 1
+        }]
+    }
+}
