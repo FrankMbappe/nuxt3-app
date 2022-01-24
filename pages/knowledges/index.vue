@@ -2,8 +2,10 @@
 	<div>
 		<p>Available pages:</p>
 		<ul>
-			<li v-for="page in max" :key="page">
-				<NuxtLink :to="`/knowledges/${page}`" class="underline"> Knowledge {{ page }} </NuxtLink>
+			<li v-for="page in maxKnowledges" :key="page">
+				<NuxtLink :to="`/projects/${page}`" class="underline">
+					Knowledge {{ page.id }} - {{ page.title }}
+				</NuxtLink>
 			</li>
 		</ul>
 	</div>
@@ -11,8 +13,16 @@
 
 <script lang="ts" setup>
 	definePageMeta({
-		layout: "redactional",
+		layout: "redactional"
 	});
 
-	const max = 5;
+	useMeta({
+		title: "Knowledges custom title",
+		description: "knowledges custom description",
+		bodyAttrs: {
+			class: "knowledges"
+		}
+	});
+
+	const maxKnowledges = useKnowledges();
 </script>

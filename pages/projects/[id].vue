@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<p>PENDING: {{ pending }}</p>
-		<p>ERROR: {{ error }}</p>
-		<p>DATA: {{ data }}</p>
+		<p>PENDING: {{ pPending }}</p>
+		<p>ERROR: {{ pError }}</p>
+		<p>DATA: {{ pData }}</p>
 	</div>
 </template>
 
@@ -11,9 +11,13 @@
 		layout: "redactional"
 	});
 
-	const route = useRoute();
+	const pRoute = useRoute();
 
-	const { data, pending, error } = useFetch(`/api/projects?id=${route.params.id}`, {
+	const {
+		data: pData,
+		pending: pPending,
+		error: pError
+	} = useFetch(`/api/knowledges?id=${pRoute.params.id}`, {
 		pick: ["title", "description"] as any
 	});
 </script>

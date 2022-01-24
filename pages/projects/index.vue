@@ -4,7 +4,7 @@
 		<ul>
 			<li v-for="page in maxProjects" :key="page">
 				<NuxtLink :to="`/projects/${page}`" class="underline">
-					Project {{ page.id }} - {{page.title}}
+					Project {{ page.id }} - {{ page.title }}
 				</NuxtLink>
 			</li>
 		</ul>
@@ -14,6 +14,14 @@
 <script lang="ts" setup>
 	definePageMeta({
 		layout: "redactional"
+	});
+
+	useMeta({
+		title: "Projects custom title",
+		description: "projects custom description",
+		bodyAttrs: {
+			class: "projects"
+		}
 	});
 
 	const maxProjects = useProjects();

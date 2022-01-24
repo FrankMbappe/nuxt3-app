@@ -4,3 +4,10 @@ export const useProjects = () => useState("projects", () => {
     });
     return data;
 });
+
+export const useKnowledges = () => useState("knowledges", () => {
+    const { data } = useFetch("/api/knowledges", {
+        pick: ["id", "title"] as any
+    });
+    return data;
+});

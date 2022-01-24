@@ -10,4 +10,12 @@
 	definePageMeta({
 		layout: "default"
 	});
+
+	useMeta({
+		title: "Homepage custom title",
+		description: "homepage custom description",
+		bodyAttrs: {
+			class: "homepage"
+		}
+	});
 </script>
