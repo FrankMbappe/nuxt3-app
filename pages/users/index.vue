@@ -3,17 +3,22 @@
 		<p>Available users:</p>
 		<ul class="mb-15">
 			<li v-for="user in data" :key="user.id">
+				-
 				<NuxtLink :to="`/users/${user.id}`" class="underline">
-					- {{ user.name }}
+					{{ user.name }}
 				</NuxtLink>
 			</li>
 		</ul>
 
-		<code>
-			<span>Pending: {{ pending }}</span><br>
-			<span>Error: {{ error }}</span><br>
-			<span>Data: {{ data }}</span>
-		</code>
+		<p class="mb-5">
+			Fetch result:
+		</p>
+
+		<div class="space-y-2">
+			<p>Pending: <code>{{ pending }}</code></p>
+			<p>Error: <code>{{ error }}</code></p>
+			<p>Data: <code>{{ data }}</code></p>
+		</div>
 	</div>
 </template>
 
@@ -23,8 +28,8 @@
 	});
 
 	useMeta({
-		title: "Users page custom title",
-		description: "Users page custom description",
+		title: "Users custom title",
+		description: "Users custom description",
 		link: [
 			{
 				rel: "shortcut icon",

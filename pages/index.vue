@@ -1,31 +1,22 @@
 <template>
-	<container>
-		<h1 class="mb-10">
+	<div>
+		<p class="text-center text-3xl mb-20">
 			This is the homepage
-		</h1>
-
-		<p class="mb-5">
-			Metadata has been injected with the "useMeta" composable
 		</p>
 
-		<div class="row">
-			<div class="col-12 col-lg-6">
+		<div class="row justify-between">
+			<div class="col-12 col-lg-5">
 				<Language />
 			</div>
-			<div class="col-12 col-lg-6">
-				<p>Random counter from store:</p>
-				<div class="flex space-x-4">
-					<button @click="counter--">
-						-
-					</button>
-					<p>{{ counter }}</p>
-					<button @click="counter++">
-						+
-					</button>
-				</div>
+			<div class="col-12 col-lg-5">
+				<Counter />
 			</div>
 		</div>
-	</container>
+
+		<p class="text-gray-500 mt-15">
+			Note: metadata has been injected with the "useMeta" composable
+		</p>
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -35,7 +26,7 @@
 
 	useMeta({
 		title: "Homepage custom title",
-		description: "homepage custom description",
+		description: "Homepage custom description",
 		link: [
 			{
 				rel: "shortcut icon",
@@ -46,6 +37,10 @@
 			class: "homepage"
 		}
 	});
-
-	const counter = useCounter();
 </script>
+
+<style scoped>
+    .row > .col-12{
+        @apply bg-dark-200 rounded p-3;
+    }
+</style>
