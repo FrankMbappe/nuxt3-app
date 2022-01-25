@@ -19,6 +19,8 @@ Nuxt 3 starter template
 
 - 🎨 [WindiCSS](https://windicss.org/utilities/) - The next generation utility-first CSS framework.
 
+- 🌍 [I18n](https://vue-i18n.intlify.dev/) - Language support
+
 - 🔥 The `<script setup>` syntax
 
 - 📥 APIs auto importing - for Composition API, VueUse and custom composables.
@@ -31,6 +33,7 @@ Nuxt 3 starter template
 
 - [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs
 - [WindiCSS](https://github.com/windicss/windicss) - the next generation utility-first CSS framework
+- [I18n](https://github.com/intlify/nuxt3) - multi language support
 
 ### How to use
 
