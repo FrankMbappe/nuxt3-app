@@ -1,17 +1,11 @@
 <template>
-	<p>Choose language</p>
+	<div>
+		<select v-model="$i18n.locale" class="mb-5">
+			<option v-for="l in $i18n.availableLocales" :key="l" :value="l">
+				{{ l }}
+			</option>
+		</select>
 
-	<select v-model="locale">
-		<option v-for="l in locales" :key="l" :value="l">
-			{{ l }}
-		</option>
-	</select>
-
-	<p>Date: {{ date }}</p>
+		<p>current translation: {{ $t("text") }}</p>
+	</div>
 </template>
-
-<script lang="ts" setup>
-	const locales = useLocales();
-	const locale = useLocale();
-	const date = useLocaleDate(new Date("1998-08-30"));
-</script>

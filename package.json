@@ -8,6 +8,7 @@
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^0.16.0",
+		"@intlify/nuxt3": "^0.1.10",
 		"eslint": "^8.7.0",
 		"nuxt-windicss": "^2.2.2",
 		"nuxt3": "latest",

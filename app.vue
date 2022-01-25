@@ -9,7 +9,7 @@
 		@apply min-h-screen relative overflow-x-hidden bg-dark-800;
 	}
 
-    option, select{
+    option, select, code{
         @apply bg-dark-200;
     }
 

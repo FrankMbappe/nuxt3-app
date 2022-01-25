@@ -6,11 +6,8 @@
 			</NuxtLink>
 
 			<div class="space-x-3">
-				<NuxtLink to="/knowledges">
-					Knowledges
-				</NuxtLink>
-				<NuxtLink to="/projects">
-					Projects
+				<NuxtLink to="/users">
+					Users
 				</NuxtLink>
 			</div>
 		</container>
