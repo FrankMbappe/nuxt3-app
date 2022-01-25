@@ -6,6 +6,6 @@
 			</option>
 		</select>
 
-		<p>current translation: {{ $t("text") }}</p>
+		<p>Current translation: {{ $t("text") }}</p>
 	</div>
 </template>
