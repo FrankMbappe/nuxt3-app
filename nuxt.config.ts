@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         localeDir: "locales",
         vueI18n: {
             legacy: false,
-            locale: "en",
+            locale: navigator.language,
             fallbackLocale: "en",
             globalInjection: true
         }
