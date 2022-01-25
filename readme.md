@@ -3,13 +3,15 @@ Nuxt 3 starter template
 </h2><br>
 
 <pre align="center">
-(WIP) - basic template, nothing fancy
+(WIP) - basic template, nothing fancy (inspired by <a href="https://github.com/antfu/vitesse" target="_blank">@antfu vitesse</a>)
 </pre>
 
 <p align="center">
 <br>
-<a href="https://ns-development.netlify.app/">🖥 Online Preview</a>
+<a href="https://ns-development.netlify.app/">🖥 Online Preview</a> 
 </p>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ebb8a49f-1ef6-4a5a-a732-0dd65c6e8638/deploy-status)](https://app.netlify.com/sites/ns-development/deploys)
 
 ### Features
 
@@ -53,3 +55,5 @@ npm i
     command = "npm i && npm run build"
     ...
 ```
+
+- Other hosting solutions [here](https://v3.nuxtjs.org/docs/deployment/presets)
