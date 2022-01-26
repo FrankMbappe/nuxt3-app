@@ -25,6 +25,8 @@ Nuxt 3 starter template
 
 - 🔥 The `<script setup>` syntax
 
+- 🍍 [Pinia State Management](https://pinia.esm.dev/)
+
 - 📥 APIs auto importing - for Composition API, VueUse and custom composables.
 
 - 🏎 Zero-config cloud functions and deploy
@@ -36,6 +38,7 @@ Nuxt 3 starter template
 - [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs
 - [WindiCSS](https://github.com/windicss/windicss) - the next generation utility-first CSS framework
 - [I18n](https://github.com/intlify/nuxt3) - multi language support
+- [Pinia](https://github.com/vuejs/pinia) - type safe and flexible store for Vue
 
 ### How to use
 

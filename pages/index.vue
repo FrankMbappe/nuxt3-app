@@ -9,7 +9,7 @@
 				<Language />
 			</div>
 			<div class="col-12 col-lg-5">
-				<Counter />
+				<Users />
 			</div>
 		</div>
 

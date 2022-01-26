@@ -9,9 +9,11 @@
 	"devDependencies": {
 		"@antfu/eslint-config": "^0.16.0",
 		"@intlify/nuxt3": "^0.1.10",
+		"@pinia/nuxt": "^0.1.8",
 		"eslint": "^8.7.0",
 		"nuxt-windicss": "^2.2.2",
 		"nuxt3": "latest",
+		"pinia": "^2.0.9",
 		"sass": "^1.49.0"
 	}
 }

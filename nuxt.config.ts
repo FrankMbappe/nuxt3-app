@@ -2,7 +2,7 @@ import type { IntlifyModuleOptions } from "nuxt3";
 import { defineNuxtConfig } from "nuxt3";
 
 export default defineNuxtConfig({
-	buildModules: ["nuxt-windicss", "@intlify/nuxt3"],
+	buildModules: ["nuxt-windicss", "@intlify/nuxt3", "@pinia/nuxt"],
 	css: ["virtual:windi-base.css", "virtual:windi-utilities.css", "assets/css/bs-grid.min.css"],
     intlify: {
         localeDir: "locales",

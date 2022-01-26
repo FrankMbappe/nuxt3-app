@@ -1,24 +1,14 @@
 <template>
 	<div>
-		<p>Available users:</p>
+		<p>Available users (from store, faster than another fetch):</p>
 		<ul class="mb-15">
-			<li v-for="user in data" :key="user.id">
+			<li v-for="user in usersStore.getUsers" :key="user.id">
 				-
 				<NuxtLink :to="`/users/${user.id}`" class="underline">
 					{{ user.name }}
 				</NuxtLink>
 			</li>
 		</ul>
-
-		<p class="mb-5">
-			Fetch result:
-		</p>
-
-		<div class="space-y-2">
-			<p>Pending: <code>{{ pending }}</code></p>
-			<p>Error: <code>{{ error }}</code></p>
-			<p>Data: <code>{{ data }}</code></p>
-		</div>
 	</div>
 </template>
 
@@ -41,5 +31,5 @@
 		}
 	});
 
-	const { data, pending, error } = await useFetch("/api/users?num=3");
+	const usersStore = useUsers();
 </script>

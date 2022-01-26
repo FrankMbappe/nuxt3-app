@@ -1,16 +1,15 @@
 <template>
 	<div>
-		<p class="mb-10">Page parameters: {{ route.params }}</p>
-
-		<p class="mb-5">
-			Fetch result:
+		<p class="mb-10">
+			Page parameters: {{ route.params }}
 		</p>
 
-		<div class="space-y-2">
-			<p>Pending: <code>{{ status }}</code></p>
-			<p>Error: <code>{{ err }}</code></p>
-			<p>Data: <code>{{ user }}</code></p>
-		</div>
+		<p class="mb-5">
+			Requested user:
+			<code>
+				{{ usersStore.getUserById(Number(route.params.id)) }}
+			</code>
+		</p>
 	</div>
 </template>
 
@@ -34,10 +33,5 @@
 	});
 
 	const route = useRoute();
-
-	const {
-		data: user,
-		pending: status,
-		error: err
-	} = await useFetch(`/api/users?id=${route.params.id}`);
+	const usersStore = useUsers();
 </script>
