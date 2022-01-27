@@ -1,9 +1,11 @@
 import type { IncomingMessage, ServerResponse } from "http";
-import * as url from "url";
+import { URLSearchParams } from "url";
 
 export default async(req: IncomingMessage, res: ServerResponse) => {
-	const queryObject = url.parse(req.url as string, true).query;
-	const { id, num } = queryObject;
+	const urlObject = new URLSearchParams(req.url as string);
+	const id = urlObject.get("id");
+	const num = urlObject.get("num");
+
 	let data = { data: [{ data: "" }] };
 
 	if (num) {
